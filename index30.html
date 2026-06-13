@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projeto escolar para o Programa Agrinho: conectando educação, sustentabilidade e agronegócio.">
+  <meta name="author" content="Seu Nome Aqui">
+  <title>Agrinho Digital | Meu Projeto Escolar</title>
+
+  <style>
+    /* === VARIÁVEIS DE COR E TIPOGRAFIA === */
+    :root {
+      --verde-primario: #2e7d32;
+      --verde-claro: #4caf50;
+      --areia: #f5f1e6;
+      --texto: #333;
+      --branco: #fff;
+      --sombra: 0 4px 12px rgba(0,0,0,0.1);
+      --fonte-principal: system-ui, -apple-system, sans-serif;
+    }
+
+    /* === RESET E BASE === */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--fonte-principal);
+      color: var(--texto);
+      background-color: var(--areia);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    section { padding: 4rem 1.5rem; max-width: 1100px; margin: auto; }
+    h2 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--verde-primario); }
+    p { margin-bottom: 1rem; }
+
+    /* === HEADER E NAVEGAÇÃO === */
+    header {
+      background: var(--verde-primario);
+      color: var(--branco);
+      padding: 1rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: var(--sombra);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .logo { font-weight: 700; font-size: 1.3rem; }
+    .menu { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .menu a { padding: 0.4rem 0.6rem; border-radius: 6px; transition: background 0.3s; }
+    .menu a:hover { background: rgba(255,255,255,0.2); }
+
+    /* === HERO (BANNER PRINCIPAL) === */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      color: var(--branco);
+      text-align: center;
+      padding: 6rem 1.5rem;
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .btn {
+      display: inline-block;
+      background: var(--verde-claro);
+      color: var(--branco);
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: transform 0.2s;
+    }
+    .btn:hover { transform: translateY(-3px); }
+
+    /* === GRID DE TEMAS === */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--branco);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: var(--sombra);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { color: var(--verde-primario); margin-bottom: 0.5rem; }
+
+    /* === SEÇÃO DO SEU PROJETO === */
+    .projeto {
+      background: var(--branco);
+      border-left: 5px solid var(--verde-claro);
+      padding: 2rem;
+      margin-top: 2rem;
+      border-radius: 0 8px 8px 0;
+    }
+    .projeto ul { margin-left: 1.2rem; }
+    .projeto li { margin-bottom: 0.5rem; }
+
+    /* === FORMULÁRIO DE CONTATO === */
+    form { display: flex; flex-direction: column; gap: 0.8rem; max-width: 500px; margin-top: 1rem; }
+    input, textarea, button {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    button[type="submit"] {
+      background: var(--verde-primario);
+      color: var(--branco);
+      cursor: pointer;
+      font-weight: 600;
+      border: none;
+    }
+    button[type="submit"]:hover { background: var(--verde-claro); }
+
+    /* === FOOTER === */
+    footer {
+      background: #1b5e20;
+      color: var(--branco);
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+    footer a { color: #a5d6a7; text-decoration: underline; }
+
+    /* === RESPONSIVIDADE === */
+    @media (max-width: 768px) {
+      .menu { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .hero h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">🌾 Agrinho Digital</div>
+      <div class="menu">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">O Agrinho</a>
+        <a href="#temas">Temas</a>
+        <a href="#projeto">Meu Projeto</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <h1>Do Campo à Escola: Educação para a Longevidade</h1>
+      <p>Projeto desenvolvido no âmbito do Programa Agrinho para promover consciência agrícola, sustentabilidade e inovação tecnológica.</p>
+      <a href="#projeto" class="btn">Conheça a proposta do 1ºB</a>
+    </section>
+
+    <section id="sobre">
+      <h2>O que é o Programa Agrinho?</h2>
+      <p>O <strong>Agrinho</strong> é um programa socioeducativo que visa conscientizar crianças e jovens sobre a importância do agronegócio, da produção de alimentos, da preservação ambiental e do desenvolvimento sustentável. Por meio de ações interdisciplinares, estudantes aprendem como o campo abastece as cidades e como a tecnologia e a cidadania podem transformar a realidade rural e urbana.</p>
+      <p>Este site foi desenvolvido como parte das atividades do 1º ano do Ensino Médio, integrando conhecimentos de Educação Digital, Ciências Humanas e Biologia.</p>
+    </section>
+
+    <section id="temas">
+      <h2>Eixos do Meu Trabalho</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>🌱 Sustentabilidade</h3>
+          <p>Práticas de conservação do solo, rotação de culturas e manejo responsável da água no agronegócio moderno.</p>
+        </article>
+        <article class="card">
+          <h3>📱 Tecnologia no Campo</h3>
+          <p>Drones, sensores de umidade, agricultura de precisão e como a digitalização está revolucionando a produção de alimentos.</p>
+        </article>
+        <article class="card">
+          <h3>🍎 Alimentação Saudável</h3>
+          <p>Da fazenda à mesa: rastreabilidade, redução de desperdício e a relação entre produção agrícola e saúde pública.</p>
+        </article>
+        <article class="card">
+          <h3>🤝 Agricultura Familiar</h3>
+          <p>O papel dos pequenos produtores na segurança alimentar, políticas públicas e cooperativismo rural.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projeto">
+      <h2>📝 Meu Projeto Prático</h2>
+      <div class="projeto">
+        <p><strong>Título:</strong> <em>[Substitua pelo nome do seu projeto]</em></p>
+        <p><strong>Objetivo:</strong> Investigar como [tema escolhido] impacta a comunidade escolar/local e propor uma solução digital/educacional.</p>
+        <p><strong>Metodologia:</strong></p>
+        <ul>
+          <li>Pesquisa bibliográfica com fontes oficiais (SENAR, IBGE, EMBRAPA)</li>
+          <li>Entrevista com produtor rural ou especialista local</li>
+          <li>Coleta de dados via formulário ou observação</li>
+          <li>Desenvolvimento deste site como portfólio interativo</li>
+        </ul>
+        <p><strong>Resultados Esperados:</strong> Conscientização sobre consumo responsável, divulgação de práticas sustentáveis e estímulo ao pensamento crítico sobre o agronegócio.</p>
+        <p><em>💡 Dica do professor: Anexe fotos, gráficos ou um QR Code que leve a um vídeo ou documento complementar.</em></p>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>📬 Envie seu Feedback</h2>
+      <p>Seu comentário é importante para a evolução deste projeto educacional.</p>
+      <form action="#" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <p style="margin-top:1rem; font-size:0.85rem; color:#666;">*Formulário ilustrativo. Para funcionamento real, integre com Formspree, Netlify Forms ou Google Forms.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto desenvolvido por <strong>[Seu Nome]</strong> | 1º Ano do Ensino Médio | 2026</p>
+    <p>Referências: <a href="https://www.senargo.com.br/agrinho" target="_blank" rel="noopener">Programa Agrinho SENAR</a> | <a href="https://www.embrapa.br" target="_blank" rel="noopener">EMBRAPA</a> | <a href="https://www.ibge.gov.br" target="_blank" rel="noopener">IBGE</a></p>
+    <p style="margin-top:0.5rem; opacity:0.8;">Código aberto para fins educacionais. Não use para fins comerciais sem autorização.</p>
+  </footer>
+
+</body>
+</html>
